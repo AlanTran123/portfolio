@@ -1,3 +1,8 @@
+html {
+  --color-accent: oklch(75% 35% 230);
+  accent-color: var(--color-accent);
+}
+
 body {
   font: 100%/1.5 system-ui;
   max-width: 100ch;
