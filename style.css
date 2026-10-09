@@ -47,12 +47,9 @@ input,
 textarea,
 button {
     font: inherit;
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
 }
 
-label {
-    display: block;
-    margin-block: 1em;
+form {
+    display: grid;
+    grid-template-columns: auto 1fr;
 }
