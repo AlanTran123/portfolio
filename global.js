@@ -35,5 +35,9 @@ for (let p of pages) {
         a.host === location.host && a.pathname === location.pathname,
     );
 
+    if (a.host !== location.host) {
+        a.target = '_blank';
+    }
+
     nav.append(a);
 }
