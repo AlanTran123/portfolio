@@ -21,6 +21,7 @@ document.body.prepend(nav);
 
 for (let p of pages) {
     let url = p.url;
+    let title = p.title;
 
     if (!url.startsWith('http')) {
         url = BASE_PATH + url;
@@ -28,7 +29,7 @@ for (let p of pages) {
 
     let a = document.createElement('a');
     a.href = url;
-    a.textContent = p.title;
+    a.textContent = title;
 
     a.classList.toggle(
         'current',
