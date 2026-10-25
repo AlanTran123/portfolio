@@ -1,62 +1,74 @@
 [
     {
-        "title": "Lorem ipsum dolor sit.",
+        "title": "Introduction to GitHub",
+        "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta magnam similique, cumque et explicabo alias magni. Vero necessitatibus nostrum, modi soluta nemo doloribus quibusdam iure commodi, eum aperiam nisi. Nam?"
+        "description": "GitHub Skills project covering the fundamentals of using GitHub, repositories, commits, branches, and collaborative development."
+    },
+    {
+        "title": "Review Pull Requests",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "GitHub Skills project focused on reviewing pull requests and practicing collaborative code review workflows."
+    },
+    {
+        "title": "Resolve Merge Conflicts",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "GitHub Skills project focused on identifying and resolving merge conflicts when working with branches and collaborative repositories."
+    },
+    {
+        "title": "Git Exercise: Conflicts",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Git exercise for practicing version control workflows and resolving conflicts between changes made with Git."
+    },
+    {
+        "title": "UC Test-Optional Diversity Data Analysis",
+        "year": "2026",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Data analysis project examining University of California admissions data and changes in applicant diversity surrounding test-optional and test-blind admissions policies."
+    },
+    {
+        "title": "IDX Exchange Internship",
+        "year": "2026",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Internship repository containing work related to data processing and analysis for residential real estate market data."
+    },
+    {
+        "title": "IDX Exchange Data Science Internship",
+        "year": "2026",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Data science internship project involving residential real estate data, data cleaning, market analysis, and visualization."
+    },
+    {
+        "title": "League of Legends Project",
+        "year": "2026",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Data science project analyzing League of Legends data using data exploration and visualization techniques."
+    },
+    {
+        "title": "Portfolio Website",
+        "year": "2026",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Personal portfolio website developed for DSC 106 using HTML, CSS, and JavaScript to showcase projects and data visualization work."
+    },
+    {
+        "title": "Lorem ipsum dolor sit.",
+        "year": "2023",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta magnam similique, cumque et explicabo alias magni."
     },
     {
         "title": "Dolore amet iste vitae.",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Commodi nam pariatur, dicta blanditiis incidunt culpa? Voluptates ipsam obcaecati non, est esse possimus provident recusandae vel culpa ipsa saepe officia debitis tempore rerum nobis illum nulla reprehenderit. Natus, expedita?"
+        "description": "Commodi nam pariatur, dicta blanditiis incidunt culpa? Voluptates ipsam obcaecati non, est esse possimus provident."
     },
     {
         "title": "Laudantium porro ipsam inventore.",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Quisquam provident enim quibusdam rem eligendi optio doloribus voluptatum blanditiis nemo! Quidem dolorum fuga porro soluta similique recusandae debitis, neque est voluptate, eius fugiat praesentium et, aperiam a! Voluptatem, quas."
-    },
-    {
-        "title": "Quos quod nobis suscipit!",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Praesentium est quidem neque natus veniam hic ipsam, quis saepe doloribus quae illo sit, velit consequuntur obcaecati dolore quasi libero unde! Quaerat quisquam totam alias enim eum nemo, modi id."
-    },
-    {
-        "title": "Corporis provident repellendus ratione.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Non ipsa dolorum optio voluptates recusandae, quaerat suscipit, facere voluptatem ex unde accusantium vel quisquam porro aperiam. Ex in labore autem maxime rem atque, quod unde a. Tempore, enim officiis."
-    },
-    {
-        "title": "Ad nemo amet beatae.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Deserunt, ex recusandae harum perspiciatis fuga itaque? Possimus exercitationem ipsum, natus quae earum eaque sit optio laudantium, corporis nesciunt a quisquam dolores aspernatur. Odit praesentium consectetur delectus! Animi, sunt praesentium?"
-    },
-    {
-        "title": "Corporis explicabo ab soluta.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Ad ipsum veniam modi tenetur iusto libero harum maiores veritatis optio beatae distinctio, iure suscipit qui saepe eum blanditiis, quibusdam enim magni rem aperiam, facere rerum. Illo similique inventore voluptatem?"
-    },
-    {
-        "title": "Molestiae sequi nobis aut.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Dignissimos soluta ullam minus, quidem exercitationem voluptatum esse vel quia numquam perspiciatis similique commodi reiciendis voluptas iusto eligendi veniam, optio sapiente earum fugit eaque rem dolores quaerat ab excepturi. Distinctio."
-    },
-    {
-        "title": "Quidem ipsum debitis repellendus.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Eum, ex dolor inventore nemo voluptates alias dolore minima neque atque eveniet corporis ratione minus aliquam praesentium, aliquid quidem aperiam ipsa assumenda magnam quos deleniti. Magnam veritatis ex molestias facere?"
-    },
-    {
-        "title": "Minus tempore possimus rem.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Asperiores, repudiandae quidem! Enim sapiente amet corporis aliquam porro ipsum qui, dolorum nemo doloremque aperiam esse reprehenderit, eligendi incidunt obcaecati aspernatur tempore cupiditate. Dolore dolores maiores sequi eos saepe quod?"
-    },
-    {
-        "title": "Quisquam voluptatem omnis sit!",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Provident possimus voluptates quia nesciunt vero illo maxime architecto obcaecati numquam cumque error, veniam impedit nemo eaque eligendi fuga corporis aliquam eius facere quam consequatur, harum nobis ducimus. Illum, fuga!"
-    },
-    {
-        "title": "Temporibus inventore vitae harum!",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Velit omnis perferendis nobis placeat, voluptatibus explicabo facilis facere recusandae ea impedit ex, itaque suscipit non illo doloribus accusamus sit repudiandae alias quia praesentium quisquam delectus deserunt, expedita corporis! Temporibus."
+        "description": "Quisquam provident enim quibusdam rem eligendi optio doloribus voluptatum blanditiis nemo!"
     }
 ]
