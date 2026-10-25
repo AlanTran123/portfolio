@@ -1,45 +1,9 @@
 [
     {
-        "title": "Introduction to GitHub",
-        "year": "2025",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "GitHub Skills project covering the fundamentals of using GitHub, repositories, commits, branches, and collaborative development."
-    },
-    {
-        "title": "Review Pull Requests",
-        "year": "2025",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "GitHub Skills project focused on reviewing pull requests and practicing collaborative code review workflows."
-    },
-    {
-        "title": "Resolve Merge Conflicts",
-        "year": "2025",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "GitHub Skills project focused on identifying and resolving merge conflicts when working with branches and collaborative repositories."
-    },
-    {
-        "title": "Git Exercise: Conflicts",
-        "year": "2025",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Git exercise for practicing version control workflows and resolving conflicts between changes made with Git."
-    },
-    {
-        "title": "UC Test-Optional Diversity Data Analysis",
+        "title": "Portfolio Website",
         "year": "2026",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Data analysis project examining University of California admissions data and changes in applicant diversity surrounding test-optional and test-blind admissions policies."
-    },
-    {
-        "title": "IDX Exchange Internship",
-        "year": "2026",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Internship repository containing work related to data processing and analysis for residential real estate market data."
-    },
-    {
-        "title": "IDX Exchange Data Science Internship",
-        "year": "2026",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Data science internship project involving residential real estate data, data cleaning, market analysis, and visualization."
+        "description": "Personal portfolio website developed for DSC 106 using HTML, CSS, and JavaScript to showcase projects and data visualization work."
     },
     {
         "title": "League of Legends Project",
@@ -48,16 +12,46 @@
         "description": "Data science project analyzing League of Legends data using data exploration and visualization techniques."
     },
     {
-        "title": "Portfolio Website",
+        "title": "IDX Exchange Data Science Internship",
         "year": "2026",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Personal portfolio website developed for DSC 106 using HTML, CSS, and JavaScript to showcase projects and data visualization work."
+        "description": "Data science internship project involving residential real estate data, data cleaning, market analysis, and visualization."
     },
     {
-        "title": "Lorem ipsum dolor sit.",
-        "year": "2023",
+        "title": "IDX Exchange Internship",
+        "year": "2026",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta magnam similique, cumque et explicabo alias magni."
+        "description": "Internship repository containing work related to data processing and analysis for residential real estate market data."
+    },
+    {
+        "title": "UC Test-Optional Diversity Data Analysis",
+        "year": "2026",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Data analysis project examining University of California admissions data and changes in applicant diversity surrounding test-optional and test-blind admissions policies."
+    },
+    {
+        "title": "Git Exercise: Conflicts",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Git exercise for practicing version control workflows and resolving conflicts between changes made with Git."
+    },
+    {
+        "title": "Resolve Merge Conflicts",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "GitHub Skills project focused on identifying and resolving merge conflicts when working with branches and collaborative repositories."
+    },
+    {
+        "title": "Review Pull Requests",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "GitHub Skills project focused on reviewing pull requests and practicing collaborative code review workflows."
+    },
+    {
+        "title": "Introduction to GitHub",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "GitHub Skills project covering the fundamentals of using GitHub, repositories, commits, branches, and collaborative development."
     },
     {
         "title": "Dolore amet iste vitae.",
@@ -70,5 +64,11 @@
         "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Quisquam provident enim quibusdam rem eligendi optio doloribus voluptatum blanditiis nemo!"
+    },
+    {
+        "title": "Lorem ipsum dolor sit.",
+        "year": "2023",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta magnam similique, cumque et explicabo alias magni."
     }
 ]
