@@ -5,9 +5,6 @@ html {
 }
 
 body {
-  /* Set line height to 1.5 times the font size
-     and use the OS’s UI font as the website font
-  */
   font: 100%/1.5 system-ui;
   max-width: 100ch;
   margin-inline: auto;
@@ -75,6 +72,8 @@ button {
   grid-column: 1 / -1;
 }
 
+/* Projects */
+
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
@@ -90,6 +89,98 @@ button {
 .projects h2 {
   margin: 0;
 }
+
+.project-year {
+  font-family: Baskerville, serif;
+  font-variant-numeric: oldstyle-nums;
+  color: gray;
+  margin-top: 0.5em;
+}
+
+/* Lab 5 pie chart */
+
+.projects-chart {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  margin-block: 2em;
+}
+
+#projects-pie-plot {
+  max-width: 20em;
+  overflow: visible;
+  flex-shrink: 0;
+}
+
+#projects-pie-plot path {
+  cursor: pointer;
+  transition: 300ms;
+}
+
+#projects-pie-plot:has(path:hover) path:not(:hover) {
+  opacity: 0.5;
+}
+
+/* Legend */
+
+.legend {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 1em;
+  list-style: none;
+  padding: 1em;
+  margin: 0;
+  border: 1px solid oklch(50% 10% 200 / 40%);
+  border-radius: 0.5em;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  cursor: pointer;
+}
+
+.swatch {
+  display: inline-block;
+  width: 1em;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color);
+  border-radius: 0.2em;
+  flex-shrink: 0;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+}
+
+.selected:is(path) {
+  fill: var(--color);
+}
+
+.legend-item.selected {
+  font-weight: bold;
+}
+
+.legend-item.selected .swatch {
+  background-color: var(--color);
+}
+
+/* Search */
+
+.searchBar {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.65em 0.8em;
+  margin-block: 1em 2em;
+  border: 1px solid oklch(50% 10% 200 / 40%);
+  border-radius: 0.4em;
+  background: transparent;
+  color: inherit;
+}
+
+/* Headings */
 
 h1 {
   font-size: 400%;
@@ -140,4 +231,16 @@ h6 {
 
 .resume li {
   margin-block: 0.4em;
+}
+
+@media (max-width: 700px) {
+  .projects-chart {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #projects-pie-plot {
+    width: 100%;
+    margin-inline: auto;
+  }
 }

@@ -4,9 +4,10 @@ function $$(selector, context = document) {
     return Array.from(context.querySelectorAll(selector));
 }
 
-const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
-    ? "/"
-    : "/portfolio/";
+const BASE_PATH =
+    location.hostname === 'localhost' || location.hostname === '127.0.0.1'
+        ? '/'
+        : '/portfolio/';
 
 let pages = [
     { url: '', title: 'Home' },
@@ -61,7 +62,7 @@ let select = document.querySelector('.color-scheme select');
 select.addEventListener('input', function (event) {
     document.documentElement.style.setProperty(
         'color-scheme',
-        event.target.value
+        event.target.value,
     );
 
     localStorage.colorScheme = event.target.value;
@@ -70,7 +71,7 @@ select.addEventListener('input', function (event) {
 if ('colorScheme' in localStorage) {
     document.documentElement.style.setProperty(
         'color-scheme',
-        localStorage.colorScheme
+        localStorage.colorScheme,
     );
 
     select.value = localStorage.colorScheme;
@@ -91,7 +92,11 @@ export async function fetchJSON(url) {
     }
 }
 
-export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+export function renderProjects(
+    projects,
+    containerElement,
+    headingLevel = 'h2',
+) {
     containerElement.innerHTML = '';
 
     for (let project of projects) {
@@ -100,7 +105,10 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
         article.innerHTML = `
             <${headingLevel}>${project.title}</${headingLevel}>
             <img src="${project.image}" alt="${project.title}">
-            <p>${project.description}</p>
+            <div>
+                <p>${project.description}</p>
+                <p class="project-year">${project.year}</p>
+            </div>
         `;
 
         containerElement.appendChild(article);
