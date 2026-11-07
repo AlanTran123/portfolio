@@ -48,7 +48,6 @@ function renderPieChart(projectsGiven) {
     const svg = d3.select('#projects-pie-plot');
     const legend = d3.select('.legend');
 
-    // Clear old chart and legend before re-rendering
     svg.selectAll('path').remove();
     legend.selectAll('li').remove();
 
@@ -86,7 +85,7 @@ function renderPieChart(projectsGiven) {
                     );
                 } else {
                     const selectedYear = data[selectedIndex].label;
-
+                    
                     const filteredByYear = currentProjects.filter(
                         (project) => project.year === selectedYear,
                     );

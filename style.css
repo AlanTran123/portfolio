@@ -17,6 +17,10 @@ img {
   height: auto;
 }
 
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+
 nav {
   --border-color: oklch(50% 10% 200 / 40%);
   display: flex;
@@ -49,6 +53,10 @@ nav a:hover {
   font-size: 80%;
 }
 
+/* ============================================================
+   FORM ELEMENTS
+   ============================================================ */
+
 input,
 textarea,
 button,
@@ -72,7 +80,9 @@ button {
   grid-column: 1 / -1;
 }
 
-/* Projects */
+/* ============================================================
+   PROJECTS
+   ============================================================ */
 
 .projects {
   display: grid;
@@ -97,7 +107,9 @@ button {
   margin-top: 0.5em;
 }
 
-/* Lab 5 pie chart */
+/* ============================================================
+   LAB 5 PIE CHART
+   ============================================================ */
 
 .projects-chart {
   display: flex;
@@ -121,7 +133,9 @@ button {
   opacity: 0.5;
 }
 
-/* Legend */
+/* ============================================================
+   LEGEND
+   ============================================================ */
 
 .legend {
   flex: 1;
@@ -167,7 +181,9 @@ button {
   background-color: var(--color);
 }
 
-/* Search */
+/* ============================================================
+   SEARCH
+   ============================================================ */
 
 .searchBar {
   width: 100%;
@@ -180,7 +196,9 @@ button {
   color: inherit;
 }
 
-/* Headings */
+/* ============================================================
+   HEADINGS
+   ============================================================ */
 
 h1 {
   font-size: 400%;
@@ -196,7 +214,9 @@ h6 {
   text-wrap: balance;
 }
 
-/* Resume page */
+/* ============================================================
+   RESUME PAGE
+   ============================================================ */
 
 .resume {
   max-width: 90ch;
@@ -233,6 +253,203 @@ h6 {
   margin-block: 0.4em;
 }
 
+/* ============================================================
+   LAB 6 — META PAGE
+   ============================================================ */
+
+/* Summary statistics */
+
+#stats {
+  margin-block: 1em 2em;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+  margin-block: 1.5em;
+}
+
+.stats dt {
+  grid-row: 1;
+  color: gray;
+  font-size: 0.8em;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.stats dd {
+  grid-row: 2;
+  margin: 0;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+/* ============================================================
+   LAB 6 CHART
+   ============================================================ */
+
+#chart {
+  width: 100%;
+  max-width: 1000px;
+  margin-block: 2em;
+}
+
+#chart svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+/* ============================================================
+   LAB 6 GRIDLINES
+   ============================================================ */
+
+.gridlines line {
+  stroke: currentColor;
+  stroke-opacity: 0.15;
+}
+
+.gridlines .domain {
+  display: none;
+}
+
+/* ============================================================
+   LAB 6 SCATTERPLOT DOTS
+   ============================================================ */
+
+.dots circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.dots circle:hover {
+  transform: scale(1.5);
+}
+
+/*
+  Lab 5 already uses .selected, so we make this rule specific
+  to Lab 6 scatterplot circles.
+*/
+
+.dots circle.selected {
+  fill: oklch(60% 45% 0);
+}
+
+/* ============================================================
+   LAB 6 TOOLTIP INFO
+   ============================================================ */
+
+dl.info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.4em 1em;
+  margin: 0;
+
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+}
+
+dl.info dt {
+  color: gray;
+  font-weight: normal;
+}
+
+dl.info dd {
+  margin: 0;
+  font-weight: bold;
+}
+
+/* ============================================================
+   LAB 6 TOOLTIP
+   ============================================================ */
+
+.tooltip {
+  position: fixed;
+
+  top: 1em;
+  left: 1em;
+
+  z-index: 1000;
+
+  max-width: 350px;
+
+  padding: 1em;
+
+  background: Canvas;
+  color: CanvasText;
+
+  border: 1px solid oklch(50% 10% 200 / 40%);
+  border-radius: 0.5em;
+
+  box-shadow: 0 4px 16px rgb(0 0 0 / 20%);
+
+  pointer-events: none;
+}
+
+.tooltip a {
+  color: var(--color-accent);
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* ============================================================
+   LAB 6 BRUSH SELECTION
+   ============================================================ */
+
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8;
+  }
+}
+
+.selection {
+  fill: var(--color-accent);
+  fill-opacity: 0.1;
+
+  stroke: currentColor;
+  stroke-opacity: 0.7;
+
+  stroke-dasharray: 5 3;
+
+  animation: marching-ants 2s linear infinite;
+}
+
+/* ============================================================
+   LAB 6 SELECTED COMMIT INFO
+   ============================================================ */
+
+#selection-count {
+  margin-block: 1em;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+/* ============================================================
+   LAB 6 LANGUAGE BREAKDOWN
+   ============================================================ */
+
+#language-breakdown {
+  margin-block: 1em 2em;
+}
+
+#language-breakdown dt {
+  font-size: 0.9em;
+}
+
+#language-breakdown dd {
+  font-size: 1em;
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN
+   ============================================================ */
+
 @media (max-width: 700px) {
   .projects-chart {
     flex-direction: column;
@@ -242,5 +459,18 @@ h6 {
   #projects-pie-plot {
     width: 100%;
     margin-inline: auto;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats dt,
+  .stats dd {
+    grid-row: auto;
+  }
+
+  #chart {
+    overflow-x: auto;
   }
 }
