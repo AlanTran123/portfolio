@@ -103,14 +103,40 @@ export function renderProjects(
     for (let project of projects) {
         const article = document.createElement('article');
 
-        article.innerHTML = `
-            <${headingLevel}>${project.title}</${headingLevel}>
-            <img src="${project.image}" alt="${project.title}">
-            <div>
-                <p>${project.description}</p>
-                <p class="project-year">${project.year}</p>
-            </div>
-        `;
+        let image = project.image;
+
+        if (!image.startsWith('http')) {
+            image = BASE_PATH + image;
+        }
+
+        if (project.url) {
+            article.innerHTML = `
+                <${headingLevel}>
+                    <a href="${project.url}" target="_blank">
+                        ${project.title}
+                    </a>
+                </${headingLevel}>
+
+                <a href="${project.url}" target="_blank">
+                    <img src="${image}" alt="${project.title}">
+                </a>
+
+                <div>
+                    <p>${project.description}</p>
+                    <p class="project-year">${project.year}</p>
+                </div>
+            `;
+        } else {
+            article.innerHTML = `
+                <${headingLevel}>${project.title}</${headingLevel}>
+                <img src="${image}" alt="${project.title}">
+
+                <div>
+                    <p>${project.description}</p>
+                    <p class="project-year">${project.year}</p>
+                </div>
+            `;
+        }
 
         containerElement.appendChild(article);
     }

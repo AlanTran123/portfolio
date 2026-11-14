@@ -1,5 +1,12 @@
 [
     {
+        "title": "BikeFlux",
+        "year": "2026",
+        "image": "images/bikeflux.png",
+        "description": "Interactive visualization of Bluebikes traffic across Boston and Cambridge, showing station activity, arrivals, departures, bike lanes, and traffic patterns over time.",
+        "url": "https://alantran123.github.io/BikeFlux/"
+    },
+    {
         "title": "Portfolio Website",
         "year": "2026",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
