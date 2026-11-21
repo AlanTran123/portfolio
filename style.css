@@ -514,3 +514,108 @@ dl.info[hidden]:not(:hover, :focus-within) {
       r: 0;
     }
   }
+
+  /* ============================================================
+   LAB 8 — UNIT VISUALIZATION
+   ============================================================ */
+
+#files {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  margin-block: 1em 3em;
+}
+
+.file {
+  display: grid;
+  grid-template-columns: 15em 1fr;
+  gap: 1em;
+  align-items: start;
+  padding-block: 0.75em;
+  border-bottom: 1px solid oklch(50% 10% 200 / 20%);
+}
+
+.file dt {
+  margin: 0;
+  min-width: 0;
+}
+
+.file dt code {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.file dt small {
+  display: block;
+  margin-top: 0.25em;
+  color: gray;
+}
+
+.file dd {
+  margin: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: start;
+  align-content: start;
+
+  gap: 0.15em;
+}
+
+.loc {
+  display: block;
+
+  width: 0.5em;
+  aspect-ratio: 1;
+
+  background: var(--color, steelblue);
+
+  border-radius: 50%;
+}
+
+
+/* Different colors for different file types */
+
+.loc[data-type="html"] {
+  --color: #e34c26;
+}
+
+.loc[data-type="css"] {
+  --color: #563d7c;
+}
+
+.loc[data-type="js"],
+.loc[data-type="javascript"] {
+  --color: #f1e05a;
+}
+
+.loc[data-type="json"] {
+  --color: #8a8a8a;
+}
+
+.loc[data-type="md"],
+.loc[data-type="markdown"] {
+  --color: #083fa1;
+}
+
+
+/* Animate lines entering/leaving */
+
+.loc {
+  transition:
+    scale 200ms,
+    opacity 200ms;
+
+  @starting-style {
+    scale: 0;
+    opacity: 0;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .file {
+    grid-template-columns: 1fr;
+  }
+}

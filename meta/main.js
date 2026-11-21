@@ -507,10 +507,7 @@ function addDotInteractions(selection) {
    SCATTERPLOT
    ============================================================ */
 
-function renderScatterPlot(
-  data,
-  commits
-) {
+function renderScatterPlot(data, commits) {
   const width = 1000;
   const height = 600;
 
@@ -772,51 +769,10 @@ function renderScatterPlot(
    UPDATE SCATTERPLOT
    ============================================================ */
 
-function updateScatterPlot(
-  data,
-  commits
-) {
+function updateScatterPlot(data, commits) {
   if (commits.length === 0) {
     return;
   }
-
-
-  const width = 1000;
-  const height = 600;
-
-
-  const margin = {
-    top: 20,
-    right: 30,
-    bottom: 50,
-    left: 60,
-  };
-
-
-  const usableArea = {
-    top: margin.top,
-
-    right:
-      width -
-      margin.right,
-
-    bottom:
-      height -
-      margin.bottom,
-
-    left:
-      margin.left,
-
-    width:
-      width -
-      margin.left -
-      margin.right,
-
-    height:
-      height -
-      margin.top -
-      margin.bottom,
-  };
 
 
   const svg =
@@ -856,13 +812,8 @@ function updateScatterPlot(
     );
 
 
-  const xAxisGroup =
-    svg.select(
-      'g.x-axis'
-    );
-
-
-  xAxisGroup
+  svg
+    .select('g.x-axis')
     .transition()
     .duration(200)
     .call(xAxis);
@@ -939,6 +890,97 @@ function updateScatterPlot(
 
 
 /* ============================================================
+   LAB 8 — UNIT VISUALIZATION
+   ============================================================ */
+
+function renderFileVisualization(data) {
+  const files =
+    d3
+      .groups(data, (d) => d.file)
+      .map(([name, lines]) => ({
+        name,
+        lines,
+      }))
+      .sort(
+        (a, b) =>
+          b.lines.length -
+          a.lines.length
+      );
+
+
+  const filesContainer =
+    d3.select('#files');
+
+
+  const fileGroups =
+    filesContainer
+      .selectAll('div.file')
+      .data(
+        files,
+        (d) => d.name
+      )
+      .join(
+        (enter) => {
+          const div =
+            enter
+              .append('div')
+              .attr(
+                'class',
+                'file'
+              );
+
+
+          div
+            .append('dt');
+
+
+          div
+            .append('dd');
+
+
+          return div;
+        }
+      );
+
+
+  fileGroups
+    .select('dt')
+    .html(
+      (d) => `
+        <code>${d.name}</code>
+        <small>
+          ${d.lines.length} lines
+        </small>
+      `
+    );
+
+
+  fileGroups
+    .select('dd')
+    .selectAll('div.loc')
+    .data(
+      (d) => d.lines,
+      (d) =>
+        `${d.commit}-${d.file}-${d.line}`
+    )
+    .join('div')
+    .attr(
+      'class',
+      'loc'
+    )
+    .attr(
+      'style',
+      (d) =>
+        `--level: ${d.depth}`
+    )
+    .attr(
+      'data-type',
+      (d) => d.type
+    );
+}
+
+
+/* ============================================================
    TIME SLIDER
    ============================================================ */
 
@@ -1011,6 +1053,17 @@ function onTimeSliderChange() {
   );
 
 
+  /*
+    Lab 8 Step 2:
+    update the file visualization
+    whenever the time slider changes.
+  */
+
+  renderFileVisualization(
+    filteredData
+  );
+
+
   document.getElementById(
     'selection-count'
   ).textContent =
@@ -1075,6 +1128,11 @@ renderCommitInfo(
 renderScatterPlot(
   data,
   commits
+);
+
+
+renderFileVisualization(
+  data
 );
 
 
