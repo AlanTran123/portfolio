@@ -673,7 +673,7 @@ dl.info[hidden]:not(:hover, :focus-within) {
      ============================================================ */
   
   #scatter-story .step {
-    min-height: 65vh;
+    min-height: 40vh;
   
     padding:
       1.5rem;
